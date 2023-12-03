@@ -7,6 +7,7 @@ import "@phosphor-icons/web/light";
 import "@phosphor-icons/web/regular";
 import "@phosphor-icons/web/bold";
 import "@phosphor-icons/web/fill";
+import ListItem from "../components/atoms/ListItem.astro";
 ---
 
 <html lang="en">
@@ -145,18 +146,8 @@ Design your landing pages with ease and creativity."
               </p>
             </div>
             <ul class="flex flex-col gap-4">
-              <li class="flex items-center gap-4">
-                <i
-                  class="flex items-center justify-center min-w-[32px] min-h-[2rem] rounded-full ph ph-check bg-secondary-500"
-                ></i>
-                <span>Try out different messaging & designs</span>
-              </li>
-              <li class="flex items-center gap-4">
-                <i
-                  class="flex items-center justify-center min-w-[32px] min-h-[2rem] rounded-full ph ph-check bg-secondary-500"
-                ></i>
-                <span>Measure test results & optimize campaigns</span>
-              </li>
+              <ListItem title="Try out different messaging & designs" />
+              <ListItem title="Measure test results & optimize campaigns" />
             </ul>
           </div>
         </div>
@@ -180,7 +171,7 @@ Design your landing pages with ease and creativity."
             <div class="flex flex-col gap-4">
               <div class="flex flex-col gap-2">
                 <h4 class="text-caption--md text-secondary-500">
-                  Unleash Your Creativity, Build Your Success
+                  Unleash your creativity, build your success
                 </h4>
                 <h2>
                   Everything you need to build better landing pages quickly
@@ -194,18 +185,12 @@ Design your landing pages with ease and creativity."
               </p>
             </div>
             <ul class="flex flex-col gap-4">
-              <li class="flex items-center gap-4">
-                <i
-                  class="flex items-center justify-center min-w-[2rem] min-h-[2rem] rounded-full ph ph-check bg-secondary-500"
-                ></i>
-                <span>Over a million free stock images from Unsplash</span>
-              </li>
-              <li class="flex items-center gap-4">
-                <i
-                  class="flex items-center justify-center min-w-[32px] min-h-[2rem] rounded-full ph ph-check bg-secondary-500"
-                ></i>
-                <span>More than 8000 icons and SVG support</span>
-              </li>
+              <ListItem
+                title="Over a million free stock images from Unsplash"
+              />
+              <ListItem title="More than 8000 free icons and SVG support" />
+              <ListItem title="Built-in Google Fonts" />
+              <ListItem title="More than 50 prebuilt templates" />
             </ul>
           </div>
         </div>
