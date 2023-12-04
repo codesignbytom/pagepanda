@@ -1,200 +1,159 @@
 ---
-import { SITE_NAME, SITE_DESCRIPTION } from "../consts";
-import "../assets/global.css";
+import { testimonials } from "../testimonials.json";
 
-// Vendor imports
-import "@phosphor-icons/web/light";
-import "@phosphor-icons/web/regular";
-import "@phosphor-icons/web/bold";
-import "@phosphor-icons/web/fill";
+import Layout from "../layouts/Layout.astro";
 import ListItem from "../components/atoms/ListItem.astro";
+import Testimonial from "../components/molecules/Testimonial.astro";
 ---
 
-<html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <meta name="viewport" content="width=device-width" />
-    <meta name="generator" content={Astro.generator} />
-    <title>{SITE_NAME} • Build high converting landing pages in minutes</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Gabarito:wght@400;500;600;700;800;900&family=IBM+Plex+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&display=swap"
-      rel="stylesheet"
-    />
-  </head>
-  <body
-    class="font-body bg-black text-white bg-grid bg-repeat bg-[size:8rem_8rem]"
-  >
-    <header>
-      <div
-        class="container flex flex-col items-center justify-center gap-6 py-6"
-      >
-        <div class="flex gap-3">
-          <img src="favicon.svg" alt="" />
-          <span class="text-2xl font-semibold uppercase">{SITE_NAME}</span>
+<Layout title="PagePanda">
+  <section class="relative pt-12 overflow-visible">
+    <div class="relative flex flex-col gap-16">
+      <div class="container flex flex-col gap-8">
+        <div class="flex flex-col gap-4 text-center">
+          <h1 class="leading-[1.1]">
+            Build high <span
+              class="text-transparent bg-clip-text from-secondary-500 to-primary-500 bg-gradient-to-r"
+              >converting</span
+            > landing pages in minutes
+          </h1>
+          <span class="opacity-50"
+            >Quickly create insanely fast, mobile optimized AMP landing pages
+            without any code using PagePanda, the landing page builder for ROI
+            driven marketers.</span
+          >
         </div>
-        <div class="hidden lg:block">
+        <div class="flex flex-col gap-4">
+          <a href="#" class="w-full button button--primary"
+            >Get started for free</a
+          >
           <a
-            href="https://app.pagepanda.com"
-            class="w-full button button--primary">Get started for free</a
+            href="#plans-and-pricing"
+            class="w-full button button-outlined--white">Plans & pricing</a
           >
         </div>
       </div>
-    </header>
-    <main>
-      <section class="relative pt-12 overflow-visible">
-        <div class="relative flex flex-col gap-16">
-          <div class="container flex flex-col gap-8">
-            <div class="flex flex-col gap-4 text-center">
-              <h1 class="leading-[1.1]">
-                Build high <span
-                  class="text-transparent bg-clip-text from-secondary-500 to-primary-500 bg-gradient-to-r"
-                  >converting</span
-                > landing pages in minutes
-              </h1>
-              <span class="opacity-50"
-                >Quickly create insanely fast, mobile optimized AMP landing
-                pages without any code using PagePanda, the landing page builder
-                for ROI driven marketers.</span
-              >
-            </div>
-            <div class="flex flex-col gap-4">
-              <a href="#" class="w-full button button--primary"
-                >Get started for free</a
-              >
-              <a
-                href="#plans-and-pricing"
-                class="w-full button button-outlined--white">Plans & pricing</a
-              >
-            </div>
-          </div>
-          <div class="container">
-            <img
-              src="pp-mockup.png"
-              alt={SITE_DESCRIPTION}
-              class="w-full pointer-events-none"
-            />
-          </div>
-          <img src="divider.svg" class="absolute -bottom-12 -z-[5] w-full" />
-        </div>
-        <div
-          class="h-[24rem] w-full absolute bottom-0 -z-10 bg-gradient-radial from-secondary-500/30 bg-no-repeat"
-        >
-        </div>
-      </section>
-      <section class="overflow-hidden pt-28">
-        <div class="container flex flex-col gap-12">
-          <div class="relative">
-            <img
-              src="pp-drag-drop.png"
-              class="w-full opacity-0 pointer-events-none"
-            />
-            <img
-              src="pp-drag-drop.png"
-              alt="Our user-friendly editor lets you effortlessly arrange and style
+      <div class="container">
+        <img
+          src="pp-mockup.png"
+          alt="Our user-friendly editor lets you effortlessly arrange and style"
+          class="w-full pointer-events-none"
+        />
+      </div>
+      <img src="divider.svg" class="absolute -bottom-12 -z-[5] w-full" />
+    </div>
+    <div
+      class="h-[24rem] w-full absolute bottom-0 -z-10 bg-gradient-radial from-secondary-500/30 bg-no-repeat"
+    >
+    </div>
+  </section>
+  <section class="overflow-hidden pt-28">
+    <div class="container flex flex-col gap-12">
+      <div class="relative">
+        <img
+          src="pp-drag-drop.png"
+          class="w-full opacity-0 pointer-events-none"
+        />
+        <img
+          src="pp-drag-drop.png"
+          alt="Our user-friendly editor lets you effortlessly arrange and style
 your content. No more wrestling with code or clunky interfaces.
 Design your landing pages with ease and creativity."
-              class="absolute top-0 object-contain w-full h-full pointer-events-none"
-            />
-          </div>
-          <div class="flex flex-col gap-4">
-            <div class="flex flex-col gap-2">
-              <h4 class="text-caption--md text-secondary-500">
-                No coding required
-              </h4>
-              <h2>Drag & Drop builder</h2>
-            </div>
-            <p>
-              Our user-friendly editor lets you effortlessly arrange and style
-              your content. No more wrestling with code or clunky interfaces.
-              Design your landing pages with ease and creativity.
-            </p>
-          </div>
+          class="absolute top-0 object-contain w-full h-full pointer-events-none"
+        />
+      </div>
+      <div class="flex flex-col gap-4">
+        <div class="flex flex-col gap-2">
+          <h4 class="text-caption--md text-secondary-500">
+            No coding required
+          </h4>
+          <h2>Drag & Drop builder</h2>
         </div>
-      </section>
-      <section class="py-16 overflow-hidden">
-        <div class="container flex flex-col gap-12">
-          <div class="relative">
-            <img
-              src="pp-converting-templates.png"
-              class="w-full opacity-0 pointer-events-none"
-            />
-            <img
-              src="pp-converting-templates.png"
-              alt="Our user-friendly editor lets you effortlessly arrange and style
+        <p>
+          Our user-friendly editor lets you effortlessly arrange and style your
+          content. No more wrestling with code or clunky interfaces. Design your
+          landing pages with ease and creativity.
+        </p>
+      </div>
+    </div>
+  </section>
+  <section class="py-16 overflow-hidden">
+    <div class="container flex flex-col gap-12">
+      <div class="relative">
+        <img
+          src="pp-converting-templates.png"
+          class="w-full opacity-0 pointer-events-none"
+        />
+        <img
+          src="pp-converting-templates.png"
+          alt="Our user-friendly editor lets you effortlessly arrange and style
 your content. No more wrestling with code or clunky interfaces.
 Design your landing pages with ease and creativity."
-              class="absolute top-0 object-contain w-full h-full pointer-events-none"
-            />
+          class="absolute top-0 object-contain w-full h-full pointer-events-none"
+        />
+      </div>
+      <div class="flex flex-col gap-6">
+        <div class="flex flex-col gap-4">
+          <div class="flex flex-col gap-2">
+            <h4 class="text-caption--md text-secondary-500">
+              Templates that get results
+            </h4>
+            <h2>High converting templates for every use case</h2>
           </div>
-          <div class="flex flex-col gap-6">
-            <div class="flex flex-col gap-4">
-              <div class="flex flex-col gap-2">
-                <h4 class="text-caption--md text-secondary-500">
-                  Templates that get results
-                </h4>
-                <h2>High converting templates for every use case</h2>
-              </div>
-              <p>
-                Explore our library of high-converting templates, thoughtfully
-                designed for a wide range of use cases. Whether you're launching
-                a product, promoting an event, or building your email list,
-                PagePanda has the perfect template to help you achieve your
-                goals.
-              </p>
-            </div>
-            <ul class="flex flex-col gap-4">
-              <ListItem title="Try out different messaging & designs" />
-              <ListItem title="Measure test results & optimize campaigns" />
-            </ul>
-          </div>
+          <p>
+            Explore our library of high-converting templates, thoughtfully
+            designed for a wide range of use cases. Whether you're launching a
+            product, promoting an event, or building your email list, PagePanda
+            has the perfect template to help you achieve your goals.
+          </p>
         </div>
-      </section>
-      <section class="py-16 overflow-hidden bg-[#0F0F0F]">
-        <div class="container flex flex-col gap-12">
-          <div class="relative">
-            <img
-              src="pp-everything-you-need.png"
-              class="w-full opacity-0 pointer-events-none"
-            />
-            <img
-              src="pp-everything-you-need.png"
-              alt="Our user-friendly editor lets you effortlessly arrange and style
+        <ul class="flex flex-col gap-4">
+          <ListItem title="Try out different messaging & designs" />
+          <ListItem title="Measure test results & optimize campaigns" />
+        </ul>
+      </div>
+    </div>
+  </section>
+  <section class="py-16 overflow-hidden bg-[#0F0F0F]">
+    <div class="container flex flex-col gap-12">
+      <div class="relative">
+        <img
+          src="pp-everything-you-need.png"
+          class="w-full opacity-0 pointer-events-none"
+        />
+        <img
+          src="pp-everything-you-need.png"
+          alt="Our user-friendly editor lets you effortlessly arrange and style
 your content. No more wrestling with code or clunky interfaces.
 Design your landing pages with ease and creativity."
-              class="absolute top-0 object-contain w-full h-full pointer-events-none"
-            />
+          class="absolute top-0 object-contain w-full h-full pointer-events-none"
+        />
+      </div>
+      <div class="flex flex-col gap-6">
+        <div class="flex flex-col gap-4">
+          <div class="flex flex-col gap-2">
+            <h4 class="text-caption--md text-secondary-500">
+              Unleash your creativity, build your success
+            </h4>
+            <h2>Everything you need to build better landing pages quickly</h2>
           </div>
-          <div class="flex flex-col gap-6">
-            <div class="flex flex-col gap-4">
-              <div class="flex flex-col gap-2">
-                <h4 class="text-caption--md text-secondary-500">
-                  Unleash your creativity, build your success
-                </h4>
-                <h2>
-                  Everything you need to build better landing pages quickly
-                </h2>
-              </div>
-              <p>
-                PagePanda is your one-stop solution for crafting exceptional
-                landing pages with ease. Whether you're a seasoned designer or
-                just starting out, our intuitive platform equips you with the
-                tools to create stunning pages that leave a lasting impact.
-              </p>
-            </div>
-            <ul class="flex flex-col gap-4">
-              <ListItem
-                title="Over a million free stock images from Unsplash"
-              />
-              <ListItem title="More than 8000 free icons and SVG support" />
-              <ListItem title="Built-in Google Fonts" />
-              <ListItem title="More than 50 prebuilt templates" />
-            </ul>
-          </div>
+          <p>
+            PagePanda is your one-stop solution for crafting exceptional landing
+            pages with ease. Whether you're a seasoned designer or just starting
+            out, our intuitive platform equips you with the tools to create
+            stunning pages that leave a lasting impact.
+          </p>
         </div>
-      </section>
+        <ul class="flex flex-col gap-4">
+          <ListItem title="Over a million free stock images from Unsplash" />
+          <ListItem title="More than 8000 free icons and SVG support" />
+          <ListItem title="Built-in Google Fonts" />
+          <ListItem title="More than 50 prebuilt templates" />
+        </ul>
+      </div>
+    </div>
+  </section>
     </main>
   </body>
 </html>
+</Layout>

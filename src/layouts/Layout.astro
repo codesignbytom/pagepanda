@@ -1,0 +1,29 @@
+---
+// Constants
+import { SITE_NAME, SITE_DESCRIPTION } from "../consts";
+import "../assets/global.css";
+
+// Vendor imports
+import "@phosphor-icons/web/light";
+import "@phosphor-icons/web/regular";
+import "@phosphor-icons/web/bold";
+import "@phosphor-icons/web/fill";
+
+// Components
+import Head from "../components/organisms/Head.astro";
+import Header from "../components/organisms/Header.astro";
+import Footer from "../components/organisms/Footer.astro";
+---
+
+<html lang="en">
+  <Head title={SITE_NAME} description={SITE_DESCRIPTION} />
+  <body
+    class="font-body bg-black text-white bg-grid bg-repeat bg-[size:8rem_8rem]"
+  >
+    <Header />
+    <main>
+      <slot />
+    </main>
+    <Footer />
+  </body>
+</html>
