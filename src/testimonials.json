@@ -1,0 +1,40 @@
+{
+  "testimonials": [
+    {
+      "name": "John Dwayne",
+      "jobTitle": "Small Business Owner",
+      "image": "testimonial-image1.png",
+      "text": "I stumbled upon PagePanda when I was struggling to create an appealing landing page for my startup. It was a game-changer. The drag-and-drop builder made everything so simple. Now, I have a professional landing page that converts like crazy!"
+    },
+    {
+      "name": "Lucas Travis",
+      "jobTitle": "E-commerce Entrepreneur",
+      "image": "testimonial-image3.png",
+      "text": "As an e-commerce entrepreneur, mobile responsiveness is crucial. PagePanda delivers on that front. My landing pages look fantastic on every device, and the SEO optimization has boosted our organic traffic. It's a must-have tool for anyone in online business."
+    },
+    {
+      "name": "Sarah Madeira",
+      "jobTitle": "Marketing Manager",
+      "image": "testimonial-image2.png",
+      "text": "PagePanda has transformed our marketing efforts. Before, creating landing pages used to be a headache. Now, it's a breeze. The A/B testing and analytics integration have helped us optimize our pages for incredible results. Highly recommended!"
+    },
+    {
+      "name": "Chris Lopez",
+      "jobTitle": "Startup Founder",
+      "image": "testimonial-image6.png",
+      "text": "Starting a business is challenging, but PagePanda eased one of my biggest worries – creating an attractive landing page. The support is fantastic; they helped me with my queries promptly. I can't recommend this tool enough."
+    },
+    {
+      "name": "Linda Riley",
+      "jobTitle": "Non-profit Coordinator",
+      "image": "testimonial-image4.png",
+      "text": "Working for a non-profit, we needed a budget-friendly solution for our landing pages. PagePanda's pricing was perfect for us, and the results have been outstanding. Our online presence has improved, and we've seen a boost in donations. Thank you, PagePanda!"
+    },
+    {
+      "name": "Emily Suha",
+      "jobTitle": "Digital Marketer",
+      "image": "testimonial-image5.png",
+      "text": "PagePanda is my go-to landing page builder. The selection of templates is impressive, and the customization options are limitless. It's a time-saver, and the lead generation forms are invaluable for building our email list."
+    }
+  ]
+}

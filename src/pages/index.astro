@@ -153,7 +153,24 @@ Design your landing pages with ease and creativity."
       </div>
     </div>
   </section>
-    </main>
-  </body>
-</html>
+  <section class="overflow-hidden pt-12">
+    <div class="container flex flex-col gap-14">
+      <div class="flex flex-col gap-2 text-center">
+        <h4 class="text-caption--md text-secondary-500">
+          Don’t just take our word for it
+        </h4>
+        <h2>What our customers are saying</h2>
+      </div>
+      {
+        testimonials.map((testimonial: any) => (
+          <Testimonial
+            image={testimonial.image}
+            name={testimonial.name}
+            text={testimonial.text}
+            jobTitle={testimonial.jobTitle}
+          />
+        ))
+      }
+    </div>
+  </section>
 </Layout>
