@@ -59,7 +59,7 @@ p {
 
 .button {
     font-size: clamp(1rem, 1vw, 1.25rem);
-    @apply flex items-center justify-center gap-4 px-6 py-4 font-medium leading-none transition-colors duration-200 ease-in-out rounded;
+    @apply flex items-center justify-center text-center gap-4 px-6 py-4 font-medium leading-none transition-colors duration-200 ease-in-out rounded;
 }
 
 .button--primary {
