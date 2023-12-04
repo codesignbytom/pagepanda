@@ -4,6 +4,7 @@ import { testimonials } from "../testimonials.json";
 import Layout from "../layouts/Layout.astro";
 import ListItem from "../components/atoms/ListItem.astro";
 import Testimonial from "../components/molecules/Testimonial.astro";
+import BackgroundRadialGradient from "../components/atoms/BackgroundRadialGradient.astro";
 ---
 
 <Layout title="PagePanda">
@@ -42,10 +43,7 @@ import Testimonial from "../components/molecules/Testimonial.astro";
       </div>
       <img src="divider.svg" class="absolute -bottom-12 -z-[5] w-full" />
     </div>
-    <div
-      class="h-[24rem] w-full absolute bottom-0 -z-10 bg-gradient-radial from-secondary-500/30 bg-no-repeat"
-    >
-    </div>
+    <BackgroundRadialGradient classes="top-40" />
   </section>
   <section class="overflow-hidden pt-28">
     <div class="container flex flex-col gap-12">

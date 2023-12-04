@@ -1,0 +1,11 @@
+---
+export interface Props {
+  classes?: string;
+}
+const { classes } = Astro.props;
+---
+
+<div
+  class=`absolute ${classes} h-[24rem] sm:h-[32rem] md:h-[40rem] lg:h-full w-full -z-10 bg-gradient-radial from-secondary-500/30 bg-no-repeat overflow-visible`
+>
+</div>
