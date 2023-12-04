@@ -42,6 +42,10 @@ h6,
     @apply text-base md:text-lg lg:text-xl;
 }
 
+p {
+    @apply leading-relaxed;
+}
+
 
 .text-caption--sm {
     font-size: clamp(.75rem, 1vw, .875rem);
@@ -76,4 +80,12 @@ h6,
 
 .capitalize-first-letter::first-letter {
     @apply capitalize;
+}
+
+.border-transparent-white {
+    border-image: linear-gradient(white, transparent) 1;
+}
+
+.border-transparent-secondary {
+    border-image: linear-gradient(rgb(151 71 255), transparent) 1;
 }
