@@ -1,0 +1,57 @@
+{
+  "tiers": [
+    {
+      "id": 0,
+      "title": "Free",
+      "price": 0,
+      "features": [
+        "10 users included",
+        "2 GB of storage",
+        "Email support",
+        "Help center access",
+        "Free domain",
+        "Free SSL certificate"
+      ],
+      "button": {
+        "text": "Get started for free",
+        "link": "#"
+      }
+    },
+    {
+      "id": 1,
+      "title": "Standard",
+      "price": 8,
+      "users": "1-50",
+      "features": [
+        "20 users included",
+        "10 GB of storage",
+        "Priority email support",
+        "Help center access",
+        "Free domain",
+        "Free SSL certificate"
+      ],
+      "button": {
+        "text": "Get started with Standard",
+        "link": "#"
+      }
+    },
+    {
+      "id": 2,
+      "title": "Plus",
+      "price": 14,
+      "users": "50+",
+      "features": [
+        "30 users included",
+        "15 GB of storage",
+        "24/7 email support",
+        "Help center access",
+        "Free domain",
+        "Free SSL certificate"
+      ],
+      "button": {
+        "text": "Get started with Plus",
+        "link": "#"
+      }
+    }
+  ]
+}
