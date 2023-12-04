@@ -1,13 +1,18 @@
 ---
-import { testimonials } from "../testimonials.json";
+import { testimonials } from "../data/testimonials.json";
+import { tiers } from "../data/pricing.json";
 
+// Layout
 import Layout from "../layouts/Layout.astro";
+
+// Components
+import BackgroundRadialGradient from "../components/atoms/BackgroundRadialGradient.astro";
 import ListItem from "../components/atoms/ListItem.astro";
 import Testimonial from "../components/molecules/Testimonial.astro";
-import BackgroundRadialGradient from "../components/atoms/BackgroundRadialGradient.astro";
+import PricingTier from "../components/molecules/PricingTier.astro";
 ---
 
-<Layout title="PagePanda">
+<Layout>
   <section class="relative pt-12 overflow-visible">
     <div class="relative flex flex-col gap-16">
       <div class="container flex flex-col gap-8">
@@ -18,11 +23,11 @@ import BackgroundRadialGradient from "../components/atoms/BackgroundRadialGradie
               >converting</span
             > landing pages in minutes
           </h1>
-          <span class="opacity-50"
-            >Quickly create insanely fast, mobile optimized AMP landing pages
+          <p class="opacity-75">
+            Quickly create insanely fast, mobile optimized AMP landing pages
             without any code using PagePanda, the landing page builder for ROI
-            driven marketers.</span
-          >
+            driven marketers.
+          </p>
         </div>
         <div class="flex flex-col gap-4">
           <a href="#" class="w-full button button--primary"
@@ -45,7 +50,7 @@ import BackgroundRadialGradient from "../components/atoms/BackgroundRadialGradie
     </div>
     <BackgroundRadialGradient classes="top-56" />
   </section>
-  <section class="relative overflow-visible pt-28">
+  <section class="relative overflow-y-visible overflow-x-hidden pt-28">
     <div class="container flex flex-col gap-12">
       <div class="relative overflow-visible">
         <img
@@ -172,5 +177,36 @@ Design your landing pages with ease and creativity."
       }
     </div>
     <BackgroundRadialGradient classes="-top-64" />
+
+    <section class="overflow-visible relative pt-12">
+      <div class="container flex flex-col gap-14">
+        <div class="flex flex-col gap-2 text-center">
+          <h4 class="text-caption--md text-secondary-500">
+            Start free, pay as you go after
+          </h4>
+          <h2>Pricing</h2>
+          <p class="opacity-75">
+            Create stunning landing pages for free with your entire team.
+            upgrade to unlock limitless designs, robust security controls, and
+            advanced features.
+          </p>
+        </div>
+        <div class="flex flex-col gap-8">
+          {
+            tiers.map((tier: any) => (
+              <PricingTier
+                id={tier.id}
+                title={tier.title}
+                features={tier.features}
+                price={tier.price}
+                button={tier.button}
+                userNumber={tier.users}
+              />
+            ))
+          }
+        </div>
+      </div>
+      <BackgroundRadialGradient classes="top-0 from-secondary-500/10" />
+    </section>
   </section>
 </Layout>

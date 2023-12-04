@@ -1,0 +1,50 @@
+---
+import PricingTierFeature from "../atoms/PricingTierFeature.astro";
+
+export interface Props {
+  id: number;
+  title?: string;
+  price?: number;
+  userNumber?: number;
+  features?: string[];
+  button?: {
+    text: string;
+    link: string;
+  };
+}
+
+const { title, features, price, userNumber, button, id } = Astro.props;
+---
+
+<div
+  class={`flex flex-col gap-12 px-8 py-12 border ${
+    id === 1 ? "border-transparent-secondary" : "border-transparent-white"
+  }`}
+>
+  <div class="flex flex-col gap-4 text-center items-center">
+    <div class="flex flex-col gap-2">
+      <div class="opacity-50 font-medium">{title}</div>
+      {
+        price === 0 ? (
+          <div class="font-medium text-xl">Free for everyone</div>
+        ) : (
+          <div class="font-medium text-xl">${price} per user/month</div>
+        )
+      }
+    </div>
+    <div class="flex items-center gap-2 opacity-50">
+      <i class="ph-fill ph-users"></i>
+      <span class="text-sm">Best for {userNumber} users</span>
+    </div>
+  </div>
+  <div class="w-full h-px bg-white/20"></div>
+  <ul class="flex flex-col gap-4">
+    {features?.map((feature: string) => <PricingTierFeature title={feature} />)}
+  </ul>
+  <a
+    href={button?.link}
+    class=`button w-full ${id === 1 ? "bg-primary-500 text-black" : "button-outlined--white"}`
+  >
+    {button?.text}
+  </a>
+</div>
