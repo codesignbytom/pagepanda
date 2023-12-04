@@ -45,12 +45,12 @@ h6,
 
 .text-caption--sm {
     font-size: clamp(.75rem, 1vw, .875rem);
-    @apply font-semibold tracking-widest uppercase leading-normal;
+    @apply font-semibold tracking-wider uppercase leading-normal;
 }
 
 .text-caption--md {
     font-size: clamp(.875rem, 1vw, 1rem);
-    @apply font-semibold tracking-widest uppercase leading-normal;
+    @apply font-semibold tracking-wider uppercase leading-normal;
 }
 
 .button {
