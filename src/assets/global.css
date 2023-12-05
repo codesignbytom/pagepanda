@@ -67,7 +67,7 @@ p {
 }
 
 .button--secondary {
-    @apply text-white button bg-secondary-500 hover:bg-secondary-600;
+    @apply text-white button bg-secondary-600 hover:bg-secondary-700;
 }
 
 .button--white {
