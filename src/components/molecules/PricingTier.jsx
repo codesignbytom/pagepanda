@@ -11,37 +11,30 @@ const PricingComponent = ({
   button,
 }) => {
   const [isMonthly, setIsMonthly] = useState(false);
+  const planClass =
+    plan === "standard"
+      ? "border-secondary-500 bg-gradient-to-t from-transparent from-20% to-white/10 backdrop-blur-xl"
+      : "border-white/20";
+  const freePlanClass = plan === "free" ? "pb-12 border-b border-white/20" : "";
+  const priceDisplay = isMonthly ? price?.monthly : price?.annually;
+  const pricePeriod = isMonthly ? "per user/month" : "per user/month";
 
   return (
     <div
-      className={`flex flex-col gap-12 px-8 py-12 border rounded-md ${
-        plan === "standard"
-          ? "border-secondary-500 bg-gradient-to-t from-transparent from-20% to-white/10 backdrop-blur-xl"
-          : "border-white/20"
-      }`}
+      className={`flex flex-col gap-12 px-6 py-12 border rounded-md ${planClass}`}
     >
       <div
-        className={`flex flex-col gap-4 text-center items-center ${
-          plan === "free" ? "pb-12 border-b border-white/20" : ""
-        }`}
+        className={`flex flex-col gap-4 text-center items-center ${freePlanClass}`}
       >
         <div className="flex flex-col gap-2">
           <div className="opacity-50 font-medium">{title}</div>
-          {!price?.monthly && !price?.annually ? (
-            <div className="font-medium text-xl">Free for everyone</div>
-          ) : (
-            <span className="text-xl font-medium flex gap-1 items-center">
-              {isMonthly ? (
-                <span>${price?.monthly}</span>
-              ) : (
-                <span>${price?.annually}</span>
-              )}
-              {isMonthly && price?.monthly && <span>per user/month</span>}
-              {!isMonthly && price?.annually && <span>per user/month</span>}
-            </span>
-          )}
+          <div className="text-xl font-medium">
+            {!priceDisplay
+              ? "Free for everyone"
+              : `$${priceDisplay} ${pricePeriod}`}
+          </div>
         </div>
-        {userNumber && userNumber !== 0 && (
+        {userNumber && (
           <div className="flex items-center gap-2 opacity-50">
             <i className="ph-fill ph-users" />
             <span className="text-sm">Best for {userNumber} users</span>
