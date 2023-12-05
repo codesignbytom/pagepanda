@@ -1,0 +1,44 @@
+{
+  "faq": [
+    {
+      "question": "How do I get started?",
+      "answer": "To get started, simply install the latest version of the PagePanda CLI in your terminal by running the following command: `npm i -g @pagepanda/cli`."
+    },
+    {
+      "question": "How do I build my landing page?",
+      "answer": "The PagePanda CLI allows you to build your landing page in just a few steps. Simply run the following command: `pagepanda build` and follow the prompts."
+    },
+    {
+      "question": "Can I use the PagePanda CLI on my existing landing pages?",
+      "answer": "Yes, you can use the PagePanda CLI to build your landing pages. Simply run the following command: `pagepanda build` and follow the prompts."
+    },
+    {
+      "question": "How do I customize the design of my landing page?",
+      "answer": "To customize the design of your landing page, you can modify the CSS styles in the `styles.css` file located in the `src` directory."
+    },
+    {
+      "question": "Can I integrate third-party analytics tools with PagePanda?",
+      "answer": "Yes, you can integrate third-party analytics tools like Google Analytics or Facebook Pixel with PagePanda. Simply add the tracking code provided by the analytics service to the `head` section of your landing page."
+    },
+    {
+      "question": "How can I add a contact form to my landing page?",
+      "answer": "To add a contact form to your landing page, you can use the built-in form component provided by PagePanda. Simply add the form component to your page template and configure the form fields and submission action."
+    },
+    {
+      "question": "Is PagePanda SEO-friendly?",
+      "answer": "Yes, PagePanda is designed to be SEO-friendly. It generates clean HTML code, provides meta tags customization, and supports server-side rendering to ensure optimal SEO performance."
+    },
+    {
+      "question": "Can I host my landing page on my own server?",
+      "answer": "Yes, you can host your PagePanda landing page on your own server. After building your landing page, you will get a static site that can be deployed to any hosting provider or server of your choice."
+    },
+    {
+      "question": "Does PagePanda support multi-language websites?",
+      "answer": "Yes, PagePanda supports multi-language websites. You can easily create and manage translations for different languages using the built-in localization features."
+    },
+    {
+      "question": "Can I use custom fonts in my landing page?",
+      "answer": "Yes, you can use custom fonts in your PagePanda landing page. Simply add the font files to your project and import them in your CSS styles."
+    }
+  ]
+}
