@@ -34,13 +34,16 @@ import Button from "../components/atoms/Button";
           </p>
         </div>
         <div class="flex flex-col gap-4">
-          <a href="#" class="w-full button button--primary"
-            >Get started for free</a
-          >
-          <a
-            href="#plans-and-pricing"
-            class="w-full button button-outlined--white">Plans & pricing</a
-          >
+          <Button
+            text="Get started for free"
+            link="#"
+            classes="button--primary"
+          />
+          <Button
+            text="Plans & pricing"
+            link="#plans-and-pricing"
+            classes="button-outlined--white"
+          />
         </div>
       </div>
       <div class="container">
@@ -170,19 +173,21 @@ Design your landing pages with ease and creativity."
         <h2>What our customers are saying</h2>
       </div>
       {
-        testimonials.map((testimonial: any) => (
-          <Testimonial
-            image={testimonial.image}
-            name={testimonial.name}
-            text={testimonial.text}
-            jobTitle={testimonial.jobTitle}
-          />
-        ))
+        testimonials
+          .slice(0, 3)
+          .map((testimonial: any) => (
+            <Testimonial
+              image={testimonial.image}
+              name={testimonial.name}
+              text={testimonial.text}
+              jobTitle={testimonial.jobTitle}
+            />
+          ))
       }
     </div>
     <BackgroundRadialGradient classes="-top-64" />
   </section>
-  <section class="relative py-12">
+  <section class="relative py-12" id="plans-and-pricing">
     <div class="container flex flex-col gap-14">
       <div class="flex flex-col gap-2 text-center">
         <h4 class="text-caption--md text-secondary-600">

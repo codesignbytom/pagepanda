@@ -1,6 +1,7 @@
 import { useState } from "react";
 import PriceToggle from "./PriceToggle.jsx";
 import PricingTierFeature from "../atoms/PricingTierFeature.jsx";
+import Button from "../atoms/Button.jsx";
 
 const PricingComponent = ({
   plan,
@@ -60,18 +61,17 @@ const PricingComponent = ({
           <PricingTierFeature key={index} title={feature} />
         ))}
       </ul>
-      <a
-        href={button?.link}
-        className={`button w-full ${
+      <Button
+        text={button?.text}
+        link={button?.link}
+        classes={`${
           plan === "standard"
-            ? "bg-primary-500 text-black"
+            ? "button--primary"
             : plan === "plus"
-            ? "bg-white text-black"
+            ? "button--white"
             : "button-outlined--white"
         }`}
-      >
-        {button?.text}
-      </a>
+      />
     </div>
   );
 };
