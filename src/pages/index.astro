@@ -13,6 +13,7 @@ import Testimonial from "../components/molecules/Testimonial.astro";
 import PricingTier from "../components/molecules/PricingTier.jsx";
 import CurvedDivider from "../components/atoms/CurvedDivider";
 import FaqItem from "../components/molecules/FaqItem.jsx";
+import Button from "../components/atoms/Button";
 ---
 
 <Layout>
@@ -244,5 +245,27 @@ Design your landing pages with ease and creativity."
       </div>
     </div>
     <CurvedDivider flipVertical={true} />
+  </section>
+  <section class="relative pt-12 pb-16">
+    <div class="container flex flex-col gap-8 bg-[#151515] rounded-lg p-8">
+      <div class="flex flex-col text-center justify-center gap-4">
+        <h2>
+          <span
+            class="bg-gradient-to-r bg-clip-text text-transparent from-secondary-500 to-primary-500"
+            >Ready to get</span
+          > more leads & sales?
+        </h2>
+        <p>
+          Start a 14 day full featured trial. No credit card required. Choose a
+          plan when you are ready. We have a forever free plan as well
+        </p>
+      </div>
+      <Button
+        text="Get started for free"
+        onClick="#"
+        classes="w-full button button--secondary"
+      />
+    </div>
+    <BackgroundRadialGradient classes="top-1/2" />
   </section>
 </Layout>

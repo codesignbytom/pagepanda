@@ -66,6 +66,10 @@ p {
     @apply text-black button bg-primary-500 hover:bg-primary-600;
 }
 
+.button--secondary {
+    @apply text-white button bg-secondary-500 hover:bg-secondary-600;
+}
+
 .button--white {
     @apply text-black bg-white button hover:bg-primary-500 hover:text-black;
 }
