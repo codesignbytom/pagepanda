@@ -1,7 +1,7 @@
 {
   "tiers": [
     {
-      "id": 0,
+      "plan": "free",
       "title": "Free",
       "price": 0,
       "features": [
@@ -18,9 +18,12 @@
       }
     },
     {
-      "id": 1,
+      "plan": "standard",
       "title": "Standard",
-      "price": 8,
+      "price": {
+        "monthly": 28,
+        "annually": 24
+      },
       "users": "1-50",
       "features": [
         "20 users included",
@@ -36,9 +39,11 @@
       }
     },
     {
-      "id": 2,
+      "plan": "plus",
       "title": "Plus",
-      "price": 14,
+      "price": {
+        "annually": 36
+      },
       "users": "50+",
       "features": [
         "30 users included",
