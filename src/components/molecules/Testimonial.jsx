@@ -1,4 +1,4 @@
-import Quotes from "../atoms/Quotes";
+import Quotes from "../atoms/svg/Quotes";
 
 const Testimonial = ({ image, name, text, jobTitle, classes = "" }) => {
   return (

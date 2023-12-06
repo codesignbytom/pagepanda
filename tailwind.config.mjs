@@ -4,7 +4,7 @@ export default {
   theme: {
     extend: {
       backgroundImage: {
-        grid: "url('/bg-grid.svg')",
+        grid: "url('svg/bg-grid.svg')",
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
       },
       colors: {

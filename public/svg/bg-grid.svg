@@ -1,6 +1,6 @@
 <svg class="bg-svg" width="496" height="496" viewBox="0 0 496 496" fill="none" xmlns="http://www.w3.org/2000/svg">
     <style>
-        path:not(mask path) { fill: #fff; opacity: 0.1; }
+        path:not(mask path) { fill: #fff; opacity: 0.05; }
     </style>
     <mask id="path-1-inside-1_2335_11838" fill="white">
         <path d="M468 468H496V496H468V468Z" />
