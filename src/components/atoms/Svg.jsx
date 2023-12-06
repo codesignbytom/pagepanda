@@ -5,11 +5,10 @@ const SVGComponent = ({
   flipHorizontal = false,
   viewBox = "",
   svgPath = "",
-  gradientStops = [], // Array of color stops
-  gradientType = "linear", // Default to 'linear'
-  gradientId = "gradient", // Default gradient ID
-  // Gradient attributes for direction
-  gradientAttributes = { x1: "0%", y1: "0%", x2: "100%", y2: "0%" }, // Default for linear
+  gradientStops = [],
+  gradientType = "linear",
+  gradientId = "gradient",
+  gradientAttributes = { x1: "0%", y1: "0%", x2: "100%", y2: "0%" },
 }) => {
   let transformClasses = "";
   if (flipVertical) {
@@ -19,10 +18,8 @@ const SVGComponent = ({
     transformClasses += " scale-x-[-1]";
   }
 
-  // Determine if gradient is needed
   const isGradient = gradientStops.length > 0;
 
-  // Render gradient definition if needed
   const renderGradient = () => {
     if (isGradient) {
       const GradientTag =
