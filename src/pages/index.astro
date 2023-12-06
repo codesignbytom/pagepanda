@@ -11,7 +11,7 @@ import BackgroundRadialGradient from "../components/atoms/BackgroundRadialGradie
 import ListItem from "../components/atoms/ListItem.astro";
 import Testimonial from "../components/molecules/Testimonial.astro";
 import PricingTier from "../components/molecules/PricingTier.jsx";
-import CurvedDivider from "../components/atoms/CurvedDivider";
+import CurvedDivider from "../components/atoms/CurvedDivider.jsx";
 import FaqItem from "../components/molecules/FaqItem.jsx";
 import Button from "../components/atoms/Button";
 ---
@@ -53,7 +53,10 @@ import Button from "../components/atoms/Button";
           class="w-full pointer-events-none"
         />
       </div>
-      <img src="divider.svg" class="absolute -bottom-12 -z-[5] w-full" />
+      <div class="absolute w-full bottom-0 -z-10">
+        <CurvedDivider />
+        <CurvedDivider flipVertical={true} />
+      </div>
     </div>
     <BackgroundRadialGradient classes="top-56" />
   </section>
