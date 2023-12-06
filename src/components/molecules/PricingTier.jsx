@@ -10,6 +10,7 @@ const PricingComponent = ({
   userNumber,
   features,
   button,
+  classes = "",
 }) => {
   const [isMonthly, setIsMonthly] = useState(false);
   const planClass =
@@ -22,7 +23,7 @@ const PricingComponent = ({
 
   return (
     <div
-      className={`flex flex-col gap-12 px-6 py-12 border rounded-md ${planClass}`}
+      className={`flex flex-col justify-center gap-12 px-6 py-12 border rounded-md ${planClass} ${classes}`}
     >
       <div
         className={`flex flex-col gap-4 text-center items-center ${freePlanClass}`}

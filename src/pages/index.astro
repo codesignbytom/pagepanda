@@ -9,7 +9,7 @@ import Layout from "../layouts/Layout.astro";
 // Components
 import BackgroundRadialGradient from "../components/atoms/BackgroundRadialGradient.astro";
 import ListItem from "../components/atoms/ListItem.astro";
-import Testimonial from "../components/molecules/Testimonial.astro";
+import Testimonial from "../components/molecules/Testimonial.jsx";
 import PricingTier from "../components/molecules/PricingTier.jsx";
 import CurvedDivider from "../components/atoms/CurvedDivider.jsx";
 import FaqItem from "../components/molecules/FaqItem.jsx";
@@ -17,10 +17,10 @@ import Button from "../components/atoms/Button";
 ---
 
 <Layout>
-  <section class="relative pt-12">
-    <div class="relative flex flex-col gap-16">
+  <section class="relative pt-12 sm:pt-24">
+    <div class="relative flex flex-col gap-16 sm:gap-20 lg:gap-24 xl:gap-28">
       <div class="container flex flex-col gap-8">
-        <div class="flex flex-col gap-4 text-center">
+        <div class="flex flex-col gap-4 sm:gap-5 md:gap-6 text-center">
           <h1 class="leading-[1.1]">
             Build high <span
               class="text-transparent bg-clip-text from-secondary-600 to-primary-500 bg-gradient-to-r"
@@ -33,7 +33,7 @@ import Button from "../components/atoms/Button";
             driven marketers.
           </p>
         </div>
-        <div class="flex flex-col gap-4">
+        <div class="flex flex-col sm:flex-row sm:justify-center gap-4">
           <Button
             text="Get started for free"
             link="#"
@@ -42,11 +42,11 @@ import Button from "../components/atoms/Button";
           <Button
             text="Plans & pricing"
             link="#plans-and-pricing"
-            classes="button-outlined--white"
+            classes="button--white"
           />
         </div>
       </div>
-      <div class="container">
+      <div class="container pb-16 sm:pb-20">
         <img
           src="pp-mockup.png"
           alt="Our user-friendly editor lets you effortlessly arrange and style"
@@ -60,19 +60,15 @@ import Button from "../components/atoms/Button";
     </div>
     <BackgroundRadialGradient classes="top-56" />
   </section>
-  <section class="relative pt-28">
-    <div class="container flex flex-col gap-12">
+  <section class="relative pt-14 sm:pt-16 md:pt-24 lg:pt-28 xl:pt-32 2xl:pt-36">
+    <div
+      class="container grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-14 items-center"
+    >
       <div class="relative">
         <img
           src="pp-drag-drop.png"
-          class="w-full opacity-0 pointer-events-none"
-        />
-        <img
-          src="pp-drag-drop.png"
-          alt="Our user-friendly editor lets you effortlessly arrange and style
-your content. No more wrestling with code or clunky interfaces.
-Design your landing pages with ease and creativity."
-          class="absolute top-0 object-contain w-full h-full pointer-events-none"
+          alt="Our user-friendly editor lets you effortlessly arrange and style your content. No more wrestling with code or clunky interfaces. Design your landing pages with ease and creativity."
+          class="w-full h-auto object-contain"
         />
       </div>
       <div class="flex flex-col gap-4">
@@ -91,19 +87,17 @@ Design your landing pages with ease and creativity."
     </div>
     <BackgroundRadialGradient classes="-right-40 top-36" />
   </section>
-  <section class="relative py-16">
-    <div class="container flex flex-col gap-12">
-      <div class="relative">
-        <img
-          src="pp-converting-templates.png"
-          class="w-full opacity-0 pointer-events-none"
-        />
+  <section class="relative py-14 sm:py-16 md:py-24 lg:py-28 xl:py-32 2xl:py-36">
+    <div
+      class="container grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-14 items-center"
+    >
+      <div class="relative order-2">
         <img
           src="pp-converting-templates.png"
           alt="Our user-friendly editor lets you effortlessly arrange and style
 your content. No more wrestling with code or clunky interfaces.
 Design your landing pages with ease and creativity."
-          class="absolute top-0 object-contain w-full h-full pointer-events-none"
+          class="w-full h-auto object-contain"
         />
       </div>
       <div class="flex flex-col gap-6">
@@ -128,19 +122,19 @@ Design your landing pages with ease and creativity."
       </div>
     </div>
   </section>
-  <section class="py-16 bg-[#151515]">
-    <div class="container flex flex-col gap-12">
+  <section
+    class="py-14 sm:py-16 md:py-24 lg:py-28 xl:py-32 2xl:py-36 bg-[#151515]"
+  >
+    <div
+      class="container grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-14 items-center"
+    >
       <div class="relative">
-        <img
-          src="pp-everything-you-need.png"
-          class="w-full opacity-0 pointer-events-none"
-        />
         <img
           src="pp-everything-you-need.png"
           alt="Our user-friendly editor lets you effortlessly arrange and style
 your content. No more wrestling with code or clunky interfaces.
 Design your landing pages with ease and creativity."
-          class="absolute top-0 object-contain w-full h-full pointer-events-none"
+          class="w-full h-auto object-contain"
         />
       </div>
       <div class="flex flex-col gap-6">
@@ -167,7 +161,7 @@ Design your landing pages with ease and creativity."
       </div>
     </div>
   </section>
-  <section class="relative pt-12">
+  <section class="relative pt-14 sm:pt-16 md:pt-24 lg:pt-28 xl:pt-32 2xl:pt-36">
     <div class="container flex flex-col gap-14">
       <div class="flex flex-col gap-2 text-center">
         <h4 class="text-caption--md text-secondary-600">
@@ -175,22 +169,34 @@ Design your landing pages with ease and creativity."
         </h4>
         <h2>What our customers are saying</h2>
       </div>
-      {
-        testimonials
-          .slice(0, 3)
-          .map((testimonial: any) => (
-            <Testimonial
-              image={testimonial.image}
-              name={testimonial.name}
-              text={testimonial.text}
-              jobTitle={testimonial.jobTitle}
-            />
-          ))
-      }
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+        {
+          testimonials
+            .slice(0, 2)
+            .map((testimonial: any) => (
+              <Testimonial
+                image={testimonial.image}
+                name={testimonial.name}
+                text={testimonial.text}
+                jobTitle={testimonial.jobTitle}
+              />
+            ))
+        }
+        <Testimonial
+          image={testimonials[2].image}
+          name={testimonials[2].name}
+          text={testimonials[2].text}
+          jobTitle={testimonials[2].jobTitle}
+          classes="col-span-full"
+        />
+      </div>
     </div>
     <BackgroundRadialGradient classes="-top-64" />
   </section>
-  <section class="relative py-12" id="plans-and-pricing">
+  <section
+    class="relative py-14 sm:py-16 md:py-24 lg:py-28 xl:py-32 2xl:py-36"
+    id="plans-and-pricing"
+  >
     <div class="container flex flex-col gap-14">
       <div class="flex flex-col gap-2 text-center">
         <h4 class="text-caption--md text-secondary-600">
@@ -204,19 +210,28 @@ Design your landing pages with ease and creativity."
         </p>
       </div>
       <div class="flex flex-col gap-8">
-        {
-          tiers.map((tier: any) => (
-            <PricingTier
-              plan={tier.plan}
-              title={tier.title}
-              features={tier.features}
-              price={tier.price}
-              button={tier.button}
-              userNumber={tier.users}
-              client:load
-            />
-          ))
-        }
+        <div
+          class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 lg:gap-4"
+        >
+          {
+            tiers.map((tier: any, index: number) => (
+              <PricingTier
+                plan={tier.plan}
+                title={tier.title}
+                features={tier.features}
+                price={tier.price}
+                button={tier.button}
+                userNumber={tier.users}
+                classes={
+                  index === tiers.length - 1
+                    ? "last:col-span-full last:lg:col-span-1"
+                    : ""
+                }
+                client:load
+              />
+            ))
+          }
+        </div>
         <p class="font-medium text-center">
           For enterprise plans, please <a href="#" class="text-primary-500"
             >contact our sales team</a
@@ -226,9 +241,11 @@ Design your landing pages with ease and creativity."
     </div>
     <BackgroundRadialGradient classes="top-1/4" />
   </section>
-  <section class="relative">
+  <section class="relative" id="faq">
     <CurvedDivider />
-    <div class="bg-primary-500 text-black py-12">
+    <div
+      class="bg-primary-500 text-black py-14 sm:py-16 md:py-24 lg:py-28 xl:py-32 2xl:py-36"
+    >
       <div class="container flex flex-col items-center gap-12">
         <div class="flex flex-col gap-2 text-center">
           <h4 class="text-caption--md text-secondary-600">
@@ -236,7 +253,7 @@ Design your landing pages with ease and creativity."
           </h4>
           <h2>Frequently asked questions</h2>
         </div>
-        <ul class="flex flex-col gap-4">
+        <ul class="flex flex-col gap-4 w-full lg:max-w-4xl">
           {
             faq
               .slice(0, 10)
