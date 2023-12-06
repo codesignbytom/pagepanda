@@ -92,3 +92,7 @@ p {
 .border-transparent-secondary {
     border-image: linear-gradient(rgb(151 71 255), transparent) 1;
 }
+
+.testimonial:nth-child(3n) {
+    @apply col-span-full xl:py-24;
+}
