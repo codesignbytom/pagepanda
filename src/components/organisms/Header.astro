@@ -1,14 +1,25 @@
 ---
+import Button from "../atoms/Button";
 import Logo from "../atoms/Logo.astro";
 ---
 
-<header>
-  <div class="container flex flex-col items-center justify-center gap-6 py-6">
-    <Logo />
-    <div class="hidden lg:block">
-      <a href="https://app.pagepanda.com" class="w-full button button--primary"
-        >Get started for free</a
-      >
-    </div>
+<header class="container flex flex-row justify-between items-center gap-6 py-6">
+  <Logo />
+  <div class="sm:hidden">
+    <Button
+      icon="question"
+      iconClasses="text-2xl"
+      link="#faq"
+      classes="button-outlined--white h-12 w-12"
+    />
+  </div>
+  <div class="hidden sm:block">
+    <Button
+      text="Got a question?"
+      icon="question"
+      iconClasses="text-xl"
+      link="#faq"
+      classes="button-outlined--white"
+    />
   </div>
 </header>
