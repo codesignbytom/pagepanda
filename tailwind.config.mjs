@@ -53,7 +53,7 @@ export default {
       addComponents({
         ".container": {
           width: "90%",
-          maxWidth: "90rem",
+          maxWidth: "80rem",
           margin: "0 auto",
         },
       });
