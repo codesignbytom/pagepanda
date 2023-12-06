@@ -49,17 +49,16 @@ p {
 
 .text-caption--sm {
     font-size: clamp(.75rem, 1vw, .875rem);
-    @apply font-semibold tracking-wider uppercase leading-normal;
+    @apply font-semibold leading-normal tracking-wider uppercase;
 }
 
 .text-caption--md {
     font-size: clamp(.875rem, 1vw, 1rem);
-    @apply font-semibold tracking-wider uppercase leading-normal;
+    @apply font-semibold leading-normal tracking-wider uppercase;
 }
 
 .button {
-    font-size: clamp(1rem, 1vw, 1.25rem);
-    @apply flex items-center justify-center text-center gap-2 lg:gap-3 px-5 lg:px-6 py-3 lg:py-4 font-medium leading-none transition-colors duration-200 ease-in-out rounded;
+    @apply flex items-center justify-center gap-2 px-5 py-3 text-base font-medium leading-none text-center transition-colors duration-200 ease-in-out rounded lg:gap-3 lg:px-6 lg:py-4;
 }
 
 .button--primary {

@@ -1,4 +1,4 @@
-import SVGComponent from "./Svg";
+import SVGComponent from "../Svg";
 
 const Quotes = ({ className = "", flipHorizontal = false }) => {
   return (
