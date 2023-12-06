@@ -2,10 +2,10 @@
 export interface Props {
   classes?: string;
 }
-const { classes } = Astro.props;
+const { classes = "" } = Astro.props;
 ---
 
 <div
-  class=`${classes} absolute h-[40rem] lg:h-full w-full -z-10 bg-gradient-radial from-secondary-600/20 bg-no-repeat`
+  class=`${classes} absolute h-[40rem] lg:h-full w-full -z-10 bg-gradient-radial from-secondary-600/20 bg-no-repeat inset-x-auto`
 >
 </div>
