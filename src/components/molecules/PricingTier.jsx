@@ -29,7 +29,7 @@ const PricingComponent = ({
         className={`flex flex-col gap-4 text-center items-center ${freePlanClass}`}
       >
         <div className="flex flex-col gap-2">
-          <div className="opacity-50 font-medium">{title}</div>
+          <div className="font-medium opacity-50">{title}</div>
           <div className="text-xl font-medium">
             {!priceDisplay
               ? "Free for everyone"
@@ -45,7 +45,7 @@ const PricingComponent = ({
       </div>
       {plan !== "free" && (
         <div className="flex items-center justify-center gap-2">
-          <div className="h-px bg-white/20 w-full" />
+          <div className="w-full h-px bg-white/20" />
           {price?.monthly && price?.annually && (
             <PriceToggle isMonthly={isMonthly} setIsMonthly={setIsMonthly} />
           )}
@@ -54,7 +54,7 @@ const PricingComponent = ({
               Annual billing only
             </span>
           )}
-          <div className="h-px bg-white/20 w-full" />
+          <div className="w-full h-px bg-white/20" />
         </div>
       )}
       <ul className="flex flex-col gap-4">
