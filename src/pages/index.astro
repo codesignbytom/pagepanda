@@ -25,40 +25,42 @@ import Button from "../components/atoms/Button";
           class="flex flex-col gap-4 text-center sm:gap-5 md:gap-6 2xl:gap-8 lg:max-w-3xl lg:mx-auto"
         >
           <h1
-            class="transition-all hero-content__title leading-[1.1] sm:text-5xl md:text-6xl 2xl:text-7xl"
+            class="animate-float-in opacity-0 animation-delay-500 transition-all leading-[1.1] sm:text-5xl md:text-6xl 2xl:text-7xl"
           >
             Build high <span
               class="text-transparent bg-clip-text from-secondary-600 to-primary-500 bg-gradient-to-r"
               >converting</span
             > landing pages in minutes
           </h1>
-          <p class="transition-all hero-content__description lg:text-lg">
+          <p
+            class="transition-all opacity-0 animate-float-in animation-delay-800 lg:text-lg"
+          >
             Quickly create insanely fast, mobile optimized AMP landing pages
             without any code using PagePanda, the landing page builder for ROI
             driven marketers.
           </p>
         </div>
         <div
-          class="flex flex-col gap-4 transition-all hero-content__buttons sm:flex-row sm:justify-center"
+          class="flex flex-col gap-4 transition-all sm:flex-row sm:justify-center"
         >
           <Button
             text="Get started for free"
             link="#"
-            classes="button--primary"
+            classes="button--primary animate-float-in opacity-0 animation-delay-1000"
           />
           <Button
             text="Plans & pricing"
             link="#plans-and-pricing"
-            classes="button--white"
+            classes="button--white animate-float-in opacity-0 animation-delay-1200"
           />
         </div>
       </div>
-      <div class="relative transition-all hero-content__image">
+      <div class="relative">
         <div class="container pb-16 sm:pb-20">
           <img
             src="pp-mockup.png"
             alt="Our user-friendly editor lets you effortlessly arrange and style"
-            class="w-full pointer-events-none"
+            class="w-full transition-all opacity-0 pointer-events-none animate-float-in animation-delay-1400"
           />
         </div>
         <FullCurvedDivider classes="absolute -bottom-1/4 w-full -z-10" />
