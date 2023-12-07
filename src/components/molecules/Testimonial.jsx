@@ -3,7 +3,7 @@ import Quotes from "../atoms/svg/Quotes";
 const Testimonial = ({ image, name, text, jobTitle, classes = "" }) => {
   return (
     <div
-      className={`testimonial flex flex-col gap-6 sm:gap-8 md:gap-10 lg:gap-12 bg-[#151515] p-6 sm:p-6 pt-12 sm:pt-12 md:p-10 md:pt-16 lg:p-12 xl:p-16 rounded-lg relative ${classes}`}
+      className={`testimonial flex flex-col gap-6 sm:gap-8 md:gap-10 lg:gap-12 bg-gradient-to-br from-neutral-950 to-neutral-900 p-6 sm:p-6 pt-12 sm:pt-12 md:p-10 md:pt-16 lg:p-12 xl:p-16 rounded-lg relative ${classes}`}
     >
       <p className="leading-relaxed">{text}</p>
       <div className="flex items-center gap-4">
