@@ -46,16 +46,36 @@ export default {
         "13xl": "12rem",
         "14xl": "13rem",
       },
+      animation: {
+        "float-in": "floatIn 750ms ease-in-out forwards",
+      },
+      keyframes: {
+        floatIn: {
+          "0%": { opacity: 0, transform: "translateY(1.5rem)" },
+          "100%": { opacity: 1, transform: "translateY(0)" },
+        },
+      },
     },
   },
   plugins: [
-    function ({ addComponents }) {
+    function ({ addComponents, addUtilities, theme }) {
       addComponents({
         ".container": {
           width: "90%",
           maxWidth: "80rem",
           margin: "0 auto",
         },
+      });
+
+      const delays = [];
+      for (let delay = 100; delay <= 2000; delay += 100) {
+        delays.push(delay);
+      }
+
+      delays.forEach((delay) => {
+        addUtilities({
+          [`.animation-delay-${delay}`]: { animationDelay: `${delay}ms` },
+        });
       });
     },
   ],
