@@ -25,7 +25,7 @@ import Button from "../components/atoms/Button";
           class="flex flex-col gap-4 text-center sm:gap-5 md:gap-6 2xl:gap-8 lg:max-w-3xl lg:mx-auto"
         >
           <h1
-            class="animate-float-in opacity-0 animation-delay-500 transition-all leading-[1.1] sm:text-5xl md:text-6xl 2xl:text-7xl"
+            class="animate-float-in-once opacity-0 animation-delay-500 transition-all leading-[1.1] sm:text-5xl md:text-6xl 2xl:text-7xl"
           >
             Build high <span
               class="text-transparent bg-clip-text from-secondary-600 to-primary-500 bg-gradient-to-r"
@@ -33,7 +33,7 @@ import Button from "../components/atoms/Button";
             > landing pages in minutes
           </h1>
           <p
-            class="transition-all opacity-0 animate-float-in animation-delay-800 lg:text-lg"
+            class="transition-all opacity-0 animate-float-in-once animation-delay-800 lg:text-lg"
           >
             Quickly create insanely fast, mobile optimized AMP landing pages
             without any code using PagePanda, the landing page builder for ROI
@@ -46,12 +46,12 @@ import Button from "../components/atoms/Button";
           <Button
             text="Get started for free"
             link="#"
-            classes="button--primary animate-float-in opacity-0 animation-delay-1000"
+            classes="button--primary animate-float-in-once opacity-0 animation-delay-1000"
           />
           <Button
             text="Plans & pricing"
             link="#plans-and-pricing"
-            classes="button--white animate-float-in opacity-0 animation-delay-1200"
+            classes="button--white animate-float-in-once opacity-0 animation-delay-1200"
           />
         </div>
       </div>
@@ -60,10 +60,12 @@ import Button from "../components/atoms/Button";
           <img
             src="pp-mockup.png"
             alt="Our user-friendly editor lets you effortlessly arrange and style"
-            class="w-full transition-all opacity-0 pointer-events-none animate-float-in animation-delay-1400"
+            class="w-full transition-all opacity-0 pointer-events-none animate-float-in-once animation-delay-1400"
           />
         </div>
-        <FullCurvedDivider classes="absolute -bottom-1/4 w-full -z-10" />
+        <FullCurvedDivider
+          classes="absolute -bottom-1/4 w-full -z-10 opacity-0 animate-float-in-once animation-delay-1600"
+        />
       </div>
     </div>
     <RadialGradientCircle
@@ -75,7 +77,8 @@ import Button from "../components/atoms/Button";
     class="relative pt-12 sm:pt-16 md:pt-40 lg:pt-[18rem] xl:pt-[28rem] 2xl:pt-[32rem]"
   >
     <div
-      class="container grid items-center grid-cols-1 gap-12 md:grid-cols-2 md:gap-14 lg:gap-16 xl:gap-20 2xl:gap-24"
+      class="container grid items-center grid-cols-1 gap-12 md:grid-cols-2 md:gap-14 lg:gap-16 xl:gap-20 2xl:gap-24 animate-float-in"
+      style="animation-timeline: view(); animation-range: entry 50% cover 50%;"
     >
       <div class="relative">
         <img
@@ -104,7 +107,8 @@ import Button from "../components/atoms/Button";
     class="relative pt-12 sm:pt-16 md:pt-40 lg:pt-[18rem] xl:pt-[28rem] 2xl:pt-[32rem]"
   >
     <div
-      class="container grid items-center grid-cols-1 gap-12 md:grid-cols-2 md:gap-14 lg:gap-16 xl:gap-20 2xl:gap-24"
+      class="container grid items-center grid-cols-1 gap-12 md:grid-cols-2 md:gap-14 lg:gap-16 xl:gap-20 2xl:gap-24 animate-float-in"
+      style="animation-timeline: view(); animation-range: entry 50% cover 50%;"
     >
       <div class="relative md:order-2">
         <img
@@ -146,7 +150,8 @@ Design your landing pages with ease and creativity."
     class="py-14 sm:py-16 md:py-24 lg:py-32 xl:py-36 2xl:py-40 mt-12 sm:mt-16 md:mt-40 lg:mt-48 xl:mt-[24rem] bg-gradient-to-br from-neutral-950 to-neutral-900"
   >
     <div
-      class="container grid items-center grid-cols-1 gap-12 md:grid-cols-2 md:gap-14 lg:gap-16 xl:gap-20 2xl:gap-24"
+      class="container grid items-center grid-cols-1 gap-12 md:grid-cols-2 md:gap-14 lg:gap-16 xl:gap-20 2xl:gap-24 animate-float-in"
+      style="animation-timeline: view(); animation-range: entry 50% cover 50%;"
     >
       <div class="relative">
         <img
@@ -190,7 +195,8 @@ Design your landing pages with ease and creativity."
   </section>
   <section class="relative pt-14 sm:pt-16 md:pt-24 lg:pt-28 xl:pt-32 2xl:pt-36">
     <div
-      class="container flex flex-col gap-14 md:gap-16 lg:gap-20 xl:gap-24 2xl:gap-28"
+      class="container flex flex-col gap-14 md:gap-16 lg:gap-20 xl:gap-24 2xl:gap-28 animate-float-in"
+      style="animation-timeline: view(); animation-range: entry 0% cover 30%;"
     >
       <div class="flex flex-col gap-2 text-center">
         <h4 class="text-caption--md text-secondary-600">
@@ -220,7 +226,8 @@ Design your landing pages with ease and creativity."
     />
   </section>
   <section
-    class="relative pb-8 pt-14 sm:pt-16 md:pt-24 lg:pt-28 xl:pt-32 2xl:pt-36 sm:pb-10 md:pb-12 lg:pb-14 xl:pb-16 2xl:pb-20"
+    class="relative pb-8 pt-14 sm:pt-16 md:pt-24 lg:pt-28 xl:pt-32 2xl:pt-36 sm:pb-10 md:pb-12 lg:pb-14 xl:pb-16 2xl:pb-20 animate-float-in"
+    style="animation-timeline: view(); animation-range: entry 0% cover 30%;"
     id="plans-and-pricing"
   >
     <div class="container flex flex-col gap-14 md:gap-16 lg:gap-20 xl:gap-24">
@@ -269,7 +276,11 @@ Design your landing pages with ease and creativity."
     </div>
     <RadialGradientCircle classes="inset-0 m-auto" />
   </section>
-  <section class="relative" id="faq">
+  <section
+    class="relative animate-float-in"
+    style="animation-timeline: view(); animation-range: entry 0% cover 30%;"
+    id="faq"
+  >
     <CurvedDivider />
     <div class="text-black bg-primary-500 py-14">
       <div class="container flex flex-col items-center gap-12">

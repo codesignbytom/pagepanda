@@ -47,10 +47,11 @@ export default {
         "14xl": "13rem",
       },
       animation: {
-        "float-in": "floatIn 750ms ease-in-out forwards",
+        "float-in-once": "float-in 750ms ease-in-out forwards",
+        "float-in": "float-in linear both",
       },
       keyframes: {
-        floatIn: {
+        "float-in": {
           "0%": { opacity: 0, transform: "translateY(1.5rem)" },
           "100%": { opacity: 1, transform: "translateY(0)" },
         },
@@ -76,6 +77,11 @@ export default {
         addUtilities({
           [`.animation-delay-${delay}`]: { animationDelay: `${delay}ms` },
         });
+      });
+
+      addUtilities({
+        "animation-timeline-view": "animation-timeline: view();",
+        "animation-range-1/2": "animation-range: entry 50% cover 50%;",
       });
     },
   ],
