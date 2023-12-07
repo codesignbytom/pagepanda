@@ -15,7 +15,7 @@ const PricingComponent = ({
   const [isMonthly, setIsMonthly] = useState(false);
   const planClass =
     plan === "standard"
-      ? "border-secondary-600 bg-gradient-to-t from-transparent from-20% to-white/10 backdrop-blur-xl"
+      ? "border-secondary-600 bg-gradient-to-t from-transparent from-20% to-white/10 backdrop-blur-xl pt-24"
       : "border-white/20";
   const freePlanClass = plan === "free" ? "pb-12 border-b border-white/20" : "";
   const priceDisplay = isMonthly ? price?.monthly : price?.annually;
@@ -23,7 +23,7 @@ const PricingComponent = ({
 
   return (
     <div
-      className={`flex flex-col justify-center gap-12 px-6 py-12 border rounded-md ${planClass} ${classes}`}
+      className={`flex flex-col justify-center gap-12 px-6 py-12 lg:py-16 border rounded-md ${planClass} ${classes}`}
     >
       <div
         className={`flex flex-col gap-4 text-center items-center ${freePlanClass}`}
@@ -58,6 +58,12 @@ const PricingComponent = ({
         </div>
       )}
       <ul className="flex flex-col gap-4">
+        {plan !== "free" && (
+          <li>
+            Everything from{" "}
+            <span className="font-medium">{plan === "standard" ? "Free" : "Standard"}</span>, plus
+          </li>
+        )}
         {features?.map((feature, index) => (
           <PricingTierFeature key={index} title={feature} />
         ))}
