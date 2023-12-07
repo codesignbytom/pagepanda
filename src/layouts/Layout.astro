@@ -1,6 +1,6 @@
 ---
 // Constants
-import { SITE_NAME, SITE_DESCRIPTION } from "../consts";
+import { SITE_URL, SITE_NAME, SITE_DESCRIPTION } from "../consts";
 import "../assets/global.css";
 
 // Vendor imports
@@ -19,7 +19,7 @@ import Footer from "../components/organisms/Footer.astro";
   lang="en"
   class="scroll-smooth overflow-x-clip font-body bg-black text-white bg-grid bg-repeat bg-[size:8rem_8rem] h-full"
 >
-  <Head title={SITE_NAME} description={SITE_DESCRIPTION} />
+  <Head title={SITE_NAME} description={SITE_DESCRIPTION} url={SITE_URL} />
   <body>
     <Header />
     <main>
