@@ -7,7 +7,7 @@ import { faq } from "../data/faq.json";
 import Layout from "../layouts/Layout.astro";
 
 // Components
-import BackgroundRadialGradient from "../components/atoms/BackgroundRadialGradient.astro";
+import RadialGradientCircle from "../components/atoms/RadialGradientCircle.jsx";
 import ListItem from "../components/atoms/ListItem.astro";
 import Testimonial from "../components/molecules/Testimonial.jsx";
 import PricingTier from "../components/molecules/PricingTier.jsx";
@@ -60,8 +60,9 @@ import Button from "../components/atoms/Button";
         <FullCurvedDivider classes="absolute -bottom-1/4 w-full -z-10" />
       </div>
     </div>
-    <BackgroundRadialGradient
+    <RadialGradientCircle
       classes="top-1/4 translate-y-[-25%] left-1/2 translate-x-[-50%] sm:w-[40rem] md:w-[48rem] lg:w-[56rem] xl:w-[64rem] 2xl:w-[72rem]"
+      opacity={30}
     />
   </section>
   <section class="relative pt-4 sm:pt-6 md:pt-8 lg:pt-[18rem] xl:pt-[24rem]">
@@ -89,7 +90,7 @@ import Button from "../components/atoms/Button";
         </p>
       </div>
     </div>
-    <BackgroundRadialGradient classes="top-0" />
+    <RadialGradientCircle classes="top-0" />
   </section>
   <section class="relative pt-4 sm:pt-6 md:pt-8 lg:pt-[18rem]">
     <div
@@ -196,7 +197,7 @@ Design your landing pages with ease and creativity."
         }
       </div>
     </div>
-    <BackgroundRadialGradient classes="top-0 left-1/2 -translate-x-1/2" />
+    <RadialGradientCircle classes="top-0 left-1/2 -translate-x-1/2" />
   </section>
   <section
     class="relative pb-8 pt-14 sm:pt-16 md:pt-24 lg:pt-28 xl:pt-32 2xl:pt-36 sm:pb-10 md:pb-12 lg:pb-14 xl:pb-16 2xl:pb-20"
@@ -246,7 +247,7 @@ Design your landing pages with ease and creativity."
         </p>
       </div>
     </div>
-    <BackgroundRadialGradient classes="top-0" />
+    <RadialGradientCircle classes="top-0" />
   </section>
   <section class="relative" id="faq">
     <CurvedDivider />
@@ -279,3 +280,5 @@ Design your landing pages with ease and creativity."
     <CurvedDivider flipVertical={true} />
   </section>
 </Layout>
+ ../components/atoms/RadialGradientCircle.jsx/index.js
+../components/atoms/RadialGradientCircle.jsx
