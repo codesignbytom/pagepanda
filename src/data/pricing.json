@@ -5,12 +5,10 @@
       "title": "Free",
       "price": 0,
       "features": [
-        "10 users included",
-        "2 GB of storage",
-        "Email support",
-        "Help center access",
-        "Free domain",
-        "Free SSL certificate"
+        "Full access to the builder",
+        "Access to all templates",
+        "Basic analytics",
+        "Help center access"
       ],
       "button": {
         "text": "Get started for free",
@@ -26,12 +24,11 @@
       },
       "users": "1-50",
       "features": [
-        "20 users included",
-        "10 GB of storage",
-        "Priority email support",
-        "Help center access",
-        "Free domain",
-        "Free SSL certificate"
+        "A/B Testing",
+        "Analytics integration",
+        "SEO optimization",
+        "Lead generation forms",
+        "24/7 email support"
       ],
       "button": {
         "text": "Get started with Standard",
@@ -46,12 +43,10 @@
       },
       "users": "50+",
       "features": [
-        "30 users included",
-        "15 GB of storage",
-        "24/7 email support",
-        "Help center access",
-        "Free domain",
-        "Free SSL certificate"
+        "Enhance security controls",
+        "Advanced analytics",
+        "Dedicated account manager",
+        "Priority support"
       ],
       "button": {
         "text": "Get started with Plus",

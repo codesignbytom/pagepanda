@@ -15,7 +15,7 @@ const PricingComponent = ({
   const [isMonthly, setIsMonthly] = useState(false);
   const planClass =
     plan === "standard"
-      ? "border-secondary-600 bg-gradient-to-t from-transparent from-20% to-white/10 backdrop-blur-xl pt-24"
+      ? "border-secondary-600 bg-gradient-to-t from-transparent from-20% to-white/10 backdrop-blur-xl lg:pt-24"
       : "border-white/20";
   const freePlanClass = plan === "free" ? "pb-12 border-b border-white/20" : "";
   const priceDisplay = isMonthly ? price?.monthly : price?.annually;
