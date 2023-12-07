@@ -1,11 +1,17 @@
 ---
 export interface Props {
   classes?: string;
+  fromColor?: string;
+  toColor?: string;
 }
-const { classes = "" } = Astro.props;
+const {
+  classes = "",
+  fromColor = "secondary-600/30",
+  toColor = "",
+} = Astro.props;
 ---
 
 <div
-  class=`${classes} absolute h-[40rem] lg:h-full w-full -z-10 bg-gradient-radial from-secondary-600/20 bg-no-repeat inset-x-auto`
+  class=`${classes} absolute w-[32rem] sm:w-[36rem] md:w-[40rem] lg:w-[48rem] xl:w-[56rem] h-auto aspect-square -z-20 bg-gradient-radial from-${fromColor} rounded-full blur-[6rem]`
 >
 </div>
