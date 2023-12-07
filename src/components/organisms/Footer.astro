@@ -1,6 +1,7 @@
 ---
 import Button from "../atoms/Button.jsx";
 import Logo from "../atoms/Logo.astro";
+import RadialGradientCircle from "../atoms/RadialGradientCircle";
 ---
 
 <footer
@@ -36,5 +37,8 @@ import Logo from "../atoms/Logo.astro";
       Copyright © {new Date().getFullYear()} • PagePanda. All rights reserved.
     </p>
   </div>
+  <RadialGradientCircle
+    classes="-top-1/4 translate-y-[-25%] left-1/2 translate-x-[-50%] sm:w-[40rem] md:w-[48rem] lg:w-[56rem] xl:w-[64rem] 2xl:w-[72rem]"
+    opacity={20}
+  />
 </footer>
-../atoms/BackgroundRadialGradient.jsx/index.js
