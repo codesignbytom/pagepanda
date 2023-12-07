@@ -8,8 +8,7 @@ h3,
 h4,
 h5,
 h6 {
-    letter-spacing: clamp(-0.025em, -0.05vw, -0.05em);
-    @apply font-normal leading-tight font-heading;
+    @apply font-normal leading-tight font-heading tracking-tight lg:tracking-tighter;
 }
 
 h1,
@@ -83,14 +82,6 @@ p {
 
 .capitalize-first-letter::first-letter {
     @apply capitalize;
-}
-
-.border-transparent-white {
-    border-image: linear-gradient(white, transparent) 1;
-}
-
-.border-transparent-secondary {
-    border-image: linear-gradient(rgb(151 71 255), transparent) 1;
 }
 
 .testimonial:nth-child(3n) {
