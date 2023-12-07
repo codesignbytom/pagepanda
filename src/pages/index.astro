@@ -24,19 +24,25 @@ import Button from "../components/atoms/Button";
         <div
           class="flex flex-col gap-4 text-center sm:gap-5 md:gap-6 2xl:gap-8 lg:max-w-3xl lg:mx-auto"
         >
-          <h1 class="leading-[1.1] sm:text-5xl md:text-6xl 2xl:text-7xl">
+          <h1
+            class="opacity-0 mb-4 transition-all hero-content__title leading-[1.1] sm:text-5xl md:text-6xl 2xl:text-7xl"
+          >
             Build high <span
               class="text-transparent bg-clip-text from-secondary-600 to-primary-500 bg-gradient-to-r"
               >converting</span
             > landing pages in minutes
           </h1>
-          <p class="opacity-75 lg:text-lg lg:opacity-50">
+          <p
+            class="opacity-0 mb-4 transition-all hero-content__description lg:text-lg"
+          >
             Quickly create insanely fast, mobile optimized AMP landing pages
             without any code using PagePanda, the landing page builder for ROI
             driven marketers.
           </p>
         </div>
-        <div class="flex flex-col gap-4 sm:flex-row sm:justify-center">
+        <div
+          class="opacity-0 mb-4 transition-all hero-content__buttons flex flex-col gap-4 sm:flex-row sm:justify-center"
+        >
           <Button
             text="Get started for free"
             link="#"
@@ -49,7 +55,7 @@ import Button from "../components/atoms/Button";
           />
         </div>
       </div>
-      <div class="relative">
+      <div class="opacity-0 mb-4 transition-all hero-content__image relative">
         <div class="container pb-16 sm:pb-20">
           <img
             src="pp-mockup.png"
@@ -65,7 +71,9 @@ import Button from "../components/atoms/Button";
       opacity={30}
     />
   </section>
-  <section class="relative pt-12 sm:pt-16 md:pt-40 lg:pt-[18rem] xl:pt-[24rem]">
+  <section
+    class="relative pt-12 sm:pt-16 md:pt-40 lg:pt-[18rem] xl:pt-[28rem] 2xl:pt-[32rem]"
+  >
     <div
       class="container grid items-center grid-cols-1 gap-12 md:grid-cols-2 md:gap-14"
     >
@@ -73,7 +81,7 @@ import Button from "../components/atoms/Button";
         <img
           src="pp-drag-drop.png"
           alt="Our user-friendly editor lets you effortlessly arrange and style your content. No more wrestling with code or clunky interfaces. Design your landing pages with ease and creativity."
-          class="object-contain w-full h-auto md:absolute md:left-full md:-translate-x-full md:top-1/2 md:-translate-y-1/2 md:min-w-[40rem] lg:min-w-[56rem]"
+          class="object-contain w-full h-auto md:absolute md:left-full md:-translate-x-full md:top-1/2 md:-translate-y-1/2 md:min-w-[40rem] lg:min-w-[56rem] xl:min-w-[64rem] 2xl:min-w-[72rem]"
         />
       </div>
       <div class="flex flex-col gap-4 md:gap-6 xl:gap-8">
@@ -92,7 +100,9 @@ import Button from "../components/atoms/Button";
     </div>
     <RadialGradientCircle classes="top-0" />
   </section>
-  <section class="relative pt-12 sm:pt-16 md:pt-40 lg:pt-[18rem] xl:pt-[24rem]">
+  <section
+    class="relative pt-12 sm:pt-16 md:pt-40 lg:pt-[18rem] xl:pt-[28rem] 2xl:pt-[32rem]"
+  >
     <div
       class="container grid items-center grid-cols-1 gap-12 md:grid-cols-2 md:gap-14"
     >
@@ -102,7 +112,7 @@ import Button from "../components/atoms/Button";
           alt="Our user-friendly editor lets you effortlessly arrange and style
 your content. No more wrestling with code or clunky interfaces.
 Design your landing pages with ease and creativity."
-          class="object-contain w-full h-auto md:absolute md:right-full md:translate-x-full md:top-1/2 md:-translate-y-1/2 md:min-w-[40rem] lg:min-w-[56rem]"
+          class="object-contain w-full h-auto md:absolute md:right-full md:translate-x-full md:top-1/2 md:-translate-y-1/2 md:min-w-[40rem] lg:min-w-[56rem] xl:min-w-[64rem] 2xl:min-w-[72rem]"
         />
       </div>
       <div class="flex flex-col gap-6">
@@ -128,9 +138,12 @@ Design your landing pages with ease and creativity."
         </ul>
       </div>
     </div>
+    <RadialGradientCircle
+      classes="bottom-1/3 -left-1/3 -translate-x-[-33.333%]"
+    />
   </section>
   <section
-    class="py-14 sm:py-16 md:py-24 lg:py-28 xl:py-32 2xl:py-36 mt-12 sm:mt-16 md:mt-40 lg:mt-48 bg-[#151515]"
+    class="py-14 sm:py-16 md:py-24 lg:py-28 xl:py-32 2xl:py-36 mt-12 sm:mt-16 md:mt-40 lg:mt-48 xl:mt-[24rem] bg-[#151515]"
   >
     <div
       class="container grid items-center grid-cols-1 gap-12 md:grid-cols-2 md:gap-14"
@@ -280,3 +293,22 @@ Design your landing pages with ease and creativity."
     <CurvedDivider flipVertical={true} />
   </section>
 </Layout>
+
+<script>
+  import { gsap } from "gsap";
+
+  function pageLoadAnimation() {
+    gsap.to(
+      ".hero-content__title, .hero-content__description, .hero-content__buttons, .hero-content__image",
+      {
+        duration: 0.75,
+        opacity: 1,
+        marginBottom: 0,
+        stagger: 0.3,
+        ease: "power1.out",
+      }
+    );
+  }
+
+  document.addEventListener("DOMContentLoaded", pageLoadAnimation);
+</script>
