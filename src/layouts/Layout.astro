@@ -17,12 +17,12 @@ import Footer from "../components/organisms/Footer.astro";
 
 <html
   lang="en"
-  class="scroll-smooth font-body bg-black text-white bg-grid bg-repeat bg-[size:8rem_8rem] h-full"
+  class="scroll-smooth overflow-x-hidden font-body bg-black text-white bg-grid bg-repeat bg-[size:8rem_8rem] h-full"
 >
   <Head title={SITE_NAME} description={SITE_DESCRIPTION} />
   <body>
     <Header />
-    <main class="overflow-clip">
+    <main>
       <slot />
     </main>
     <Footer />
