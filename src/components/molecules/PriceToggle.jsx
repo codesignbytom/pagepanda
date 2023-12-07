@@ -15,8 +15,8 @@ function PriceToggle({ isMonthly, setIsMonthly }) {
       <div
         className={`toggle-${label.toLowerCase()} ${
           isActive
-            ? "bg-primary-500 text-black hover:bg-primary-400 hover:shadow-md hover:shadow-primary-500"
-            : "bg-white/10 text-white/40 hover:bg-white/20"
+            ? "bg-primary-500 text-black hover:bg-primary-400 hover:shadow-md hover:shadow-primary-500 relative z-10"
+            : "bg-white/10 text-white/40 hover:bg-white/20 relative"
         } ${alignmentClass} rounded-full flex items-center justify-center py-0.5 px-4 text-sm font-medium cursor-pointer select-none transition-[colors, box-shadow] duration-150`}
         onClick={handleToggle}
       >
