@@ -4,22 +4,24 @@ import Logo from "../atoms/Logo.astro";
 ---
 
 <header class="container flex flex-row items-center justify-between gap-6 py-6">
-  <Logo />
-  <div class="sm:hidden">
-    <Button
-      icon="question"
-      iconClasses="text-2xl"
-      link="#faq"
-      classes="button-outlined--white h-12 w-12"
-    />
-  </div>
-  <div class="hidden sm:block">
-    <Button
-      text="Got a question?"
-      icon="question"
-      iconClasses="text-xl"
-      link="#faq"
-      classes="button-outlined--white"
-    />
+  <Logo classes="opacity-0 animate-float-in-once animation-delay-500" />
+  <div class="opacity-0 animate-float-in-once animation-delay-600">
+    <div class="sm:hidden">
+      <Button
+        icon="question"
+        iconClasses="text-2xl"
+        link="#faq"
+        classes="button-outlined--white h-12 w-12"
+      />
+    </div>
+    <div class="hidden sm:block">
+      <Button
+        text="Got a question?"
+        icon="question"
+        iconClasses="text-xl"
+        link="#faq"
+        classes="button-outlined--white"
+      />
+    </div>
   </div>
 </header>
