@@ -35,9 +35,9 @@ const Button = ({
           showModal={showModal}
           closeModal={closeModal}
           title="Unable to proceed"
+          client:load
         >
-          This is a demo site. The links are disabled to prevent you from
-          leaving this page.
+          Sorry, this is just a demo. You can't proceed further.
         </Modal>
       )}
     </>
