@@ -9,7 +9,8 @@ import "@phosphor-icons/web/regular";
 import "@phosphor-icons/web/bold";
 import "@phosphor-icons/web/fill";
 
-import { SpeedInsights } from "@vercel/speed-insights/react";
+import { injectSpeedInsights } from "@vercel/speed-insights";
+injectSpeedInsights;
 
 // Components
 import Head from "../components/organisms/Head.astro";
@@ -28,6 +29,5 @@ import Footer from "../components/organisms/Footer.astro";
       <slot />
     </main>
     <Footer />
-    <SpeedInsights />
   </body>
 </html>
